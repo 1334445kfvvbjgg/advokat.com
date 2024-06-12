@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+    <html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Кнопки</title>
+<style>
+.green-button {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+</style>
+</head>
+<body>
+
+<button class="green-button" id="contactButton">Контакты</button>
+<button class="green-button" id="reviewButton">Написать отзыв</button>
+<button class="green-button" id="helpButton">Помощь</button>
+
+<div id="reviewForm" style="display: none;">
+    <h2>Напишите отзыв:</h2>
+    <form id="reviewFormContent">
+        <label for="fullName">Имя и Фамилия:</label><br>
+        <input type="text" id="fullName" name="fullName" required><br>
+        <label for="review">Ваш отзыв:</label><br>
+        <textarea id="review" name="review" rows="4" required></textarea><br><br>
+        <button type="submit">Отправить</button>
+    </form>
+</div>
+
+<script>
+document.getElementById("contactButton").addEventListener("click", function() {
+    var phoneNumber = "87472064407";
+    var email = "EMAIL@EXAMPLE.COM";
+    alert("Телефон: " + phoneNumber + "\nПочта: " + email);
+});
+
+document.getElementById("helpButton").addEventListener("click", function() {
+    var helpRequest = prompt("Чем мы можем помочь?");
+    // Далее можно обработать запрос помощи, например, отправить его на сервер для дальнейшей обработки или просто вывести сообщение
+    alert("Спасибо за ваш запрос: " + helpRequest);
+});
+
+document.getElementById("reviewButton").addEventListener("click", function() {
+    document.getElementById("reviewForm").style.display = "block";
+});
+
+document.getElementById("reviewFormContent").addEventListener("submit", function(event) {
+    event.preventDefault(); // Предотвращаем стандартное поведение отправки формы
+    
+    // Получаем данные из формы
+    var fullName = document.getElementById("fullName").value;
+    var review = document.getElementById("review").value;
+
+    // Ваш код для отправки отзыва на сервер
+    // Здесь можно использовать AJAX запрос или другие методы
+    
+    // Просто для демонстрации выводим данные в консоль
+    console.log("Имя и Фамилия: " + fullName);
+    console.log("Отзыв: " + review);
+
+    // Очищаем поля формы
+    document.getElementById("fullName").value = "";
+    document.getElementById("review").value = "";
+
+    // Показываем сообщение об успешной отправке (можно изменить на ваш вариант)
+    alert("Спасибо за ваш отзыв!");
+});
+</script>
+
+</body>
+</html>
+    <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Адвокатский сайт</title>
+    <style>
+        .search-container {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .search-input {
+            padding: 10px;
+            width: 70%;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            outline: none;
+        }
+        .search-button {
+            padding: 10px 20px;
+            background-color: green;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .search-button:hover {
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="search-container">
+        <form action="https://www.google.com/search" method="get" target="_blank">
+            <input type="text" name="q" class="search-input" placeholder="Введите запрос...">
+            <button type="submit" class="search-button">Найти</button>
+        </form>
+    </div>
+</body>
+</html>
+
+
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Книги по адвокатуре</title>
+    <style>
+        .book {
+            border: 1px solid #ddd;
+            margin: 10px;
+            padding: 10px;
+            width: 200px;
+            display: inline-block;
+            text-align: center;
+        }
+        .book img {
+            width: 100%;
+            height: auto;
+        }
+        .price, .buy-button {
+            display: block;
+            margin: 10px 0;
+        }
+        .buy-button {
+            background-color: green;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+        .cart {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        .cart button {
+            background-color: red;
+            color: white;
+            padding: 5px;
+            border: none;
+            cursor: pointer;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+    
+
+
+
+
+
+
+
+   <html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Книги по адвокатуре</title>
+    <style>
+        .book {
+            border: 1px solid #ddd;
+            margin: 10px;
+            padding: 10px;
+            width: 200px;
+            display: inline-block;
+            text-align: center;
+            vertical-align: top;
+        }
+        .book img {
+            width: 100%;
+            height: auto;
+        }
+        .price, .buy-button, .title {
+            display: block;
+            margin: 10px 0;
+        }
+        .buy-button {
+            background-color: green;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+        .cart {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            clear: both;
+        }
+        .cart button {
+            background-color: red;
+            color: white;
+            padding: 5px;
+            border: none;
+            cursor: pointer;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="books">
+        <div class="book" data-title="Юридические основы" data-price="5000">
+            <img src="https://cdn1.ozone.ru/s3/multimedia-x/6026525373.jpg" alt="Юридические основы">
+            <span class="title">Юридические основы</span>
+            <span class="price">5000 тенге</span>
+            <button class="buy-button">Купить</button>
+        </div>
+        <div class="book" data-title="Основы права" data-price="6000">
+            <img src="https://ibooks.ru/images/T/978985503375.jpg" alt="Основы права">
+            <span class="title">Основы права</span>
+            <span class="price">6000 тенге</span>
+            <button class="buy-button">Купить</button>
+        </div>
+        <div class="book" data-title="Судебная практика" data-price="7000">
+            <img src="http://img1.advertology.ru/books/2016/03/04/23/41/135308156.jpg" alt="Судебная практика">
+            <span class="title">Судебная практика</span>
+            <span class="price">7000 тенге</span>
+            <button class="buy-button">Купить</button>
+        </div>
+        <div class="book" data-title="Криминалистика" data-price="8000">
+            <img src="http://litgid.com/upload/iblock/33c/33cda07cd55c847cc90840b2d8235023.jpg" alt="Криминалистика">
+            <span class="title">Криминалистика</span>
+            <span class="price">8000 тенге</span>
+            <button class="buy-button">Купить</button>
+        </div>
+        <div class="book" data-title="Гражданское право" data-price="9000">
+            <img src="https://avatars.mds.yandex.net/get-mpic/6217624/img_id2537125058701416142.jpeg/orig" alt="Гражданское право">
+            <span class="title">Гражданское право</span>
+            <span class="price">9000 тенге</span>
+            <button class="buy-button">Купить</button>
+        </div>
+        <div class="book" data-title="Уголовное право" data-price="10000">
+            <img src="https://www.belykrolik.ru/media/catalog/product_images/15674311_1_ugolovnoe-pravo-obschaya-chast-uchebnik.jpg" alt="Уголовное право">
+            <span class="title">Уголовное право</span>
+            <span class="price">10000 тенге</span>
+            <button class="buy-button">Купить</button>
+        </div>
+        <div class="book" data-title="Международное право" data-price="11000">
+            <img src="https://img-fotki.yandex.ru/get/6835/311748008.ef/0_107bd4_50dee40c_orig" alt="Международное право">
+            <span class="title">Международное право</span>
+            <span class="price">11000 тенге</span>
+            <button class="buy-button">Купить</button>
+        </div>
+        <div class="book" data-title="Конституционное право" data-price="12000">
+            <img src="https://cdn1.ozone.ru/multimedia/1024285252.jpg" alt="Конституционное право">
+            <span class="title">Конституционное право</span>
+            <span class="price">12000 тенге</span>
+            <button class="buy-button">Купить</button>
+        </div>
+        <div class="book" data-title="Арбитражный процесс" data-price="13000">
+            <img src="https://cdn1.ozone.ru/multimedia/1003134157.jpg" alt="Арбитражный процесс">
+            <span class="title">Арбитражный процесс</span>
+            <span class="price">13000 тенге</span>
+            <button class="buy-button">Купить</button>
+        </div>
+        <div class="book" data-title="Налоговое право" data-price="14000">
+            <img src="https://cdn1.ozone.ru/multimedia/1024282893.jpg" alt="Налоговое право">
+            <span class="title">Налоговое право</span>
+            <span class="price">14000 тенге</span>
+            <button class="buy-button">Купить</button>
+        </div>
+        <div class="book" data-title="Трудовое право" data-price="15000">
+            <img src="https://cdn1.ozone.ru/multimedia/1026962753.jpg" alt="Трудовое право">
+            <span class="title">Трудовое право</span>
+            <span class="price">15000 тенге</span>
+            <button class="buy-button">Купить</button>
+        </div>
+        <div class="book" data-title="Коммерческое право" data-price="16000">
+            <img src="https://7books.ru/wp-content/uploads/2023/06/Kommercheskoe-predprinimatelskoe-pravo.-Tom-1.-5-e-izdanie.-Uchebnik21990852.jpg" alt="Коммерческое право">
+            <span class="title">Коммерческое право</span>
+            <span class="price">16000 тенге</span>
+            <button class="buy-button">Купить</button>
+        </div>
+        <div class="book" data-title="Адвокатская этика" data-price="17000">
+            <img src="https://cv0.litres.ru/pub/c/cover_max1500/67582500.jpg" alt="Адвокатская этика">
+            <span class="title">Адвокатская этика</span>
+            <span class="price">17000 тенге</span>
+            <button class="buy-button">Купить</button>
+        </div>
+        <div class="book" data-title="Корпоративное право" data-price="18000">
+            <img src="https://imo2.my-shop.ru/products352/3510581/cover.jpg/500-0" alt="Корпоративное право">
+            <span class="title">Корпоративное право</span>
+            <span class="price">18000 тенге</span>
+            <button class="buy-button">Купить</button>
+        </div>
+        <div class="book" data-title="Интеллектуальная собственность" data-price="19000">
+            <img src="https://cv3.litres.ru/pub/c/cover/23962634.jpg" alt="Интеллектуальная собственность">
+            <span class="title">Интеллектуальная собственность</span>
+            <span class="price">19000 тенге</span>
+            <button class="buy-button">Купить</button>
+        </div>
+        <div class="book" data-title="Экологическое право" data-price="20000">
+            <img src="http://ibooks.ru/images/T/941021.jpg" alt="Экологическое право">
+            <span class="title">Экологическое право</span>
+            <span class="price">20000 тенге</span>
+            <button class="buy-button">Купить</button>
+        </div>
+        <div class="book" data-title="Банковское право" data-price="21000">
+            <img src="https://www.cmp24.ru/images/prodacts/sourse/64395/64395643_bankovskoe-pravo-uchebnik-dlya-bakalavrov-prospekt.jpg" alt="Банковское право">
+            <span class="title">Банковское право</span>
+            <span class="price">21000 тенге</span>
+            <button class="buy-button">Купить</button>
+        </div>
+        <div class="book" data-title="Медицинское право" data-price="22000">
+            <img src="https://lib.kaznmu.edu.kz/wp-content/uploads/2014/10/%D0%A2%D1%8E%D0%BA%D0%B0%D0%B2%D0%BA%D0%B8%D0%BD%D0%B0-%D0%91%D0%B8%D0%BE%D0%BE%D1%80%D0%B3-%D1%85%D0%B8%D0%BC%D0%B8%D1%8F0133-0134-699x1024.jpg" alt="Медицинское право">
+            <span class="title">Медицинское право</span>
+            <span class="price">22000 тенге</span>
+            <button class="buy-button">Купить</button>
+        </div>
+        <div class="book" data-title="Права человека" data-price="23000">
+            <img src="https://narisyu.cdnbro.com/posts/53304121-risunok-vseobshchaia-deklaratsiia-prav-cheloveka-16.jpg" alt="Права человека">
+            <span class="title">Права человека</span>
+            <span class="price">23000 тенге</span>
+            <button class="buy-button">Купить</button>
+        </div>
+        <div class="book" data-title="Семейное право" data-price="24000">
+            <img src="https://static2.my-shop.ru/products436/4359216/cover.jpg" alt="Семейное право">
+            <span class="title">Семейное право</span>
+            <span class="price">24000 тенге</span>
+            <button class="buy-button">Купить</button>
+        </div>
+    </div>
+
+    <div class="cart">
+        <h2>Корзина</h2>
+        <ul id="cart-items"></ul>
+        <p>Общая сумма: <span id="total-price">0</span> тенге
+                    </p>
+        <button id="clear-cart">Очистить корзину</button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cartItems = document.getElementById('cart-items');
+            const totalPriceElement = document.getElementById('total-price');
+            const clearCartButton = document.getElementById('clear-cart');
+
+            document.querySelectorAll('.buy-button').forEach(button => {
+                button.addEventListener('click', () => {
+                    const bookElement = button.parentElement;
+                    const title = bookElement.dataset.title;
+                    const price = parseInt(bookElement.dataset.price);
+                    addToCart(title, price);
+                });
+            });
+
+            clearCartButton.addEventListener('click', clearCart);
+
+            function addToCart(title, price) {
+                const cartItem = document.createElement('li');
+                cartItem.textContent = `${title} - ${price} тенге`;
+                const removeButton = document.createElement('button');
+                removeButton.textContent = 'Удалить';
+                removeButton.addEventListener('click', () => {
+                    removeFromCart(cartItem, price);
+                });
+                cartItem.appendChild(removeButton);
+                cartItems.appendChild(cartItem);
+                updateTotalPrice(price);
+            }
+
+            function removeFromCart(cartItem, price) {
+                cartItems.removeChild(cartItem);
+                updateTotalPrice(-price);
+            }
+
+            function clearCart() {
+                while (cartItems.firstChild) {
+                    cartItems.removeChild(cartItems.firstChild);
+                }
+                updateTotalPrice(0, true);
+            }
+
+            function updateTotalPrice(price, reset = false) {
+                const currentTotal = parseInt(totalPriceElement.textContent);
+                totalPriceElement.textContent = reset ? 0 : currentTotal + price;
+            }
+        });
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рабочие часы</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="working-hours">
+        <h1>Часы работы</h1>
+        <table>
+            <tr>
+                <td>Понедельник - Пятница:</td>
+                <td>9:00 - 17:00</td>
+            </tr>
+            <tr>
+                <td>Суббота:</td>
+                <td>10:00 - 15:00</td>
+            </tr>
+            <tr>
+                <td>Воскресенье:</td>
+                <td>Выходной</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<form method='POST' action='https://demo.paykeeper.ru/create/' >
+    Введите сумму оплаты: 
+      <input type='text' name='sum' value='100'/> <br />
+    Введите номер заказа: 
+      <input type='text' name='orderid' value='123456'/> <br />
+    Введите название услуги: 
+      <input type='text' name='service_name' value='Тестовая оплата'/> <br />
+    <input type='submit' value='Перейти к оплате' />
+  </form>
+
+
+
+
+
+
+
+
+
+  
